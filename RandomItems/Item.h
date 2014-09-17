@@ -15,6 +15,14 @@
     NSDate *_dateCreated;
 }
 
+//Designated initializer for Item
+-(instancetype)initWithItemName:(NSString *)name
+                   serialNumber:(NSString *)sNumber
+                 valueInDollars:(int)value;
+
+
+-(instancetype)initWithItemName:(NSString *)name;
+
 -(void)setItemName:(NSString *)str;
 -(NSString *)itemName;
 

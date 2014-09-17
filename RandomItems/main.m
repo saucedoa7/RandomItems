@@ -29,7 +29,7 @@ int main(int argc, const char * argv[])
             // Log the desc of the item
             NSLog(@"For Item %@", item);
         }
-
+/*
         Item *item = [Item new];
 
         // This creates an NSString, "Red Sofa" and gives it to the BNRItem
@@ -60,9 +60,23 @@ int main(int argc, const char * argv[])
         NSLog(@"%@ %@ %@ %d", item.itemName, item.dateCreated, item.serialNumber, item.valueInDollars);
 
         //or with accessors
+*/
+
+
+        //Using Initializers
+
+        Item *item = [[Item alloc] initWithItemName:@"Albert"
+                                       serialNumber:@"A1b1"
+                                     valueInDollars:100];
 
         // The %@ token is replaced with the result of sending the description message to the corresponding argument”
-        NSLog(@"%@", item);
+        NSLog(@"Item -> %@", item);
+
+        Item *itemWithNAme = [[Item alloc] initWithItemName:@"John Doe"];
+        NSLog(@"Item W/ Name -> %@", itemWithNAme);
+
+        Item *itemWithNoNAme = [Item new];
+        NSLog(@"Item W/o Name -> %@", itemWithNoNAme);
 
         //Destroy the mustable array object
         items = nil;
