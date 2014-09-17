@@ -10,6 +10,7 @@
 		50999A4419C7E68200395421 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50999A4319C7E68200395421 /* Foundation.framework */; };
 		50999A4719C7E68200395421 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50999A4619C7E68200395421 /* main.m */; };
 		50999A4B19C7E68200395421 /* RandomItems.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50999A4A19C7E68200395421 /* RandomItems.1 */; };
+		50999A5319C8FE0800395421 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 50999A5219C8FE0800395421 /* Item.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		50999A4619C7E68200395421 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50999A4919C7E68200395421 /* RandomItems-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RandomItems-Prefix.pch"; sourceTree = "<group>"; };
 		50999A4A19C7E68200395421 /* RandomItems.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RandomItems.1; sourceTree = "<group>"; };
+		50999A5119C8FE0800395421 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		50999A5219C8FE0800395421 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				50999A4619C7E68200395421 /* main.m */,
+				50999A5119C8FE0800395421 /* Item.h */,
+				50999A5219C8FE0800395421 /* Item.m */,
 				50999A4A19C7E68200395421 /* RandomItems.1 */,
 				50999A4819C7E68200395421 /* Supporting Files */,
 			);
@@ -139,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50999A5319C8FE0800395421 /* Item.m in Sources */,
 				50999A4719C7E68200395421 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +227,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RandomItems/RandomItems-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -230,6 +237,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RandomItems/RandomItems-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
