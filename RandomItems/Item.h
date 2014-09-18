@@ -16,14 +16,22 @@
     NSString *_serialNumber;
     int _valueInDollars;
     NSDate *_dateCreated;
+    int _attack;
+    int _defence;
 
 }
 
-#pragma mark (#) Designated initializer for Item
+#pragma mark (11) Declare a class method that will create a random item
+
++(instancetype)randomItem;
+
+#pragma mark (7) Designated initializer for Item
 
 -(instancetype)initWithItemName:(NSString *)name
                    serialNumber:(NSString *)sNumber
-                 valueInDollars:(int)value;
+                 valueInDollars:(int)value
+                         attack:(int)attackpt
+                        defence:(int)defencept;
 
 
 -(instancetype)initWithItemName:(NSString *)name;
@@ -39,6 +47,11 @@
 -(void)setValueInDollars:(int)v;
 -(int)valueInDollars;
 
--(NSDate *)dateCreated;
+-(void)setAttack:(int)a;
+-(int)attack;
 
+-(void)setDefence:(int)d;
+-(int)defence;
+
+-(NSDate *)dateCreated;
 @end
