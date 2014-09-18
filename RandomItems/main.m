@@ -15,20 +15,21 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
 
         NSMutableArray *items = [NSMutableArray new];
+        /*
+         //Send the message addObject: to the NSMutableArray pointed to by the variable items, passing a string each time
+         [items addObject:@"One"];
+         [items addObject:@"Two"];
+         [items addObject:@"Three"];
 
-        //Send the message addObject: to the NSMutableArray pointed to by the variable items, passing a string each time
-        [items addObject:@"One"];
-        [items addObject:@"Two"];
-        [items addObject:@"Three"];
+         //Send another message, insertObjectAtIndex:, to that same array object
+         [items insertObject:@"Zero" atIndex:0];
 
-        //Send another message, insertObjectAtIndex:, to that same array object
-        [items insertObject:@"Zero" atIndex:0];
-
-        //For every item in the item array
-        for (NSString *item in items) {
-            // Log the desc of the item
-            NSLog(@"For Item %@", item);
-        }
+         //For every item in the item array
+         for (NSString *item in items) {
+         // Log the desc of the item
+         NSLog(@"For Item %@", item);
+         }
+         */
 
 #pragma mark (4) create an instance of BNRItem and log its instance variables to the console (First Options). Dot notation is prefered
 
@@ -66,40 +67,46 @@ int main(int argc, const char * argv[])
          */
 
 #pragma mark (6) Chain of Initializers
+        /*
+         //“ replace the statement that prints out the instance variables individually with a statement that relies on BNRItem’s implementation of description”
 
-        //“ replace the statement that prints out the instance variables individually with a statement that relies on BNRItem’s implementation of description”
+         //        Item *itemWithFullDescription = [[Item alloc] initWithItemName:@"Red Sofa"
+         //                                       serialNumber:@"A1b1"
+         //                                     valueInDollars:100];
 
-//        Item *itemWithFullDescription = [[Item alloc] initWithItemName:@"Red Sofa"
-//                                       serialNumber:@"A1b1"
-//                                     valueInDollars:100];
+         // The %@ token is replaced with the result of sending the description message to the corresponding argument”
+         //        NSLog(@"Item -> %@", itemWithFullDescription);
 
-        // The %@ token is replaced with the result of sending the description message to the corresponding argument”
-//        NSLog(@"Item -> %@", itemWithFullDescription);
+         //        Item *itemWithNAme = [[Item alloc] initWithItemName:@"Blue Sofa"];
+         //        NSLog(@"Item W/ Name -> %@", itemWithNAme);
 
-//        Item *itemWithNAme = [[Item alloc] initWithItemName:@"Blue Sofa"];
-//        NSLog(@"Item W/ Name -> %@", itemWithNAme);
-
-        //“you must override init in BNRItem to link to BNRItem’s designated initializer.”
-//        Item *itemWithNoNAme = [Item new];
-//        NSLog(@"Item W/o Name -> %@", itemWithNoNAme);
-
+         //“you must override init in BNRItem to link to BNRItem’s designated initializer.”
+         //        Item *itemWithNoNAme = [Item new];
+         //        NSLog(@"Item W/o Name -> %@", itemWithNoNAme);
+         */
 
 #pragma mark (13) Fill the items array with 10 randomly-created instances of BNRItem.
 
         //Then you will loop through the array and log each item
-
+        
         for (int i; i < 10; i++) {
             Item *item = [Item randomItem];
             [items addObject:item];
         }
-
+        
         for (Item *item in items) {
             NSLog(@"%@", item);
         }
-        
+
+        //lastObject is an instance of Item class and will not understand the count message..
+
+        /*
+        id lastObject = [items lastObject];
+        [lastObject count];
+         */
+
         //Destroy the mustable array object
         items = nil;
     }
     return 0;
 }
-

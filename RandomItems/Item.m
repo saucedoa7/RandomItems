@@ -114,7 +114,7 @@
 // “Note what you are not doing here: you are not passing the instance variables by name (e.g.., _itemName).”
 
 -(NSString *)description{
-    NSString *stringDesc = [[NSString alloc] initWithFormat:@"%@ (%@): worth $%d, Attack %d & Defence %d recorded on %@",
+    NSString *stringDesc = [[NSString alloc] initWithFormat:@"\n%@\n (%@)\n worth $%d,\n Attack %d & Defence %d\n recorded on %@\n",
                             self.itemName,
                             self.serialNumber,
                             self.valueInDollars,
@@ -128,10 +128,10 @@
 
 +(instancetype)randomItem{
     // Creat and immutable array of three adjectives
-    NSArray *randomAdjectives = @[@"Fluffy", @"Wild", @"Shiny"];
+    NSArray *randomAdjectives = @[@"Fluffy", @"Wild", @"Shiny", @"Crazy"];
 
     //Create an immutable array of three nouns
-    NSArray *randomNouns = @[@"Bear", @"Lion", @"Tiger"];
+    NSArray *randomNouns = @[@"Bear", @"Lion", @"Tiger", @"Snake"];
 
     //Get the index of a random noun/adjective from an array
 
@@ -140,7 +140,11 @@
     int randomAttack = (arc4random() % 30)*100;
     int randomDefence = (arc4random() %30)*100;
 
-    NSString *randomName = [NSString stringWithFormat:@"A %@ %@ appeared", [randomAdjectives objectAtIndex:randomAdjectiveIndex],[randomNouns objectAtIndex:randomNounIndex]];
+//    NSString *randomName = [NSString stringWithFormat:@"\nA %@ %@ appeared", [randomAdjectives objectAtIndex:randomAdjectiveIndex],[randomNouns objectAtIndex:randomNounIndex]];
+
+    // Shorhand instead of ^^
+
+    NSString *randomName = [NSString stringWithFormat:@"\n A %@ %@ appeared", randomAdjectives[randomAdjectiveIndex], randomNouns[randomNounIndex]];
 
     int randomValue = arc4random() % 100;
 
