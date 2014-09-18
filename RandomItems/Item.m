@@ -10,7 +10,7 @@
 
 @implementation Item
 
-                        /* Let’s form some simple rules for initializers from these ideas.*/
+#pragma mark            /* Let’s form some simple rules for initializers from these ideas.*/
 
 // 1. A class inherits all initializers from its superclass and can add as many as it wants for its own purposes.
 // 2. Each class picks one initializer as its designated initializer.
@@ -48,7 +48,7 @@
     return [self initWithItemName:@"Item"];
 }
 
-//  Each setter method sets the instance variable to whatever is passed in as an argument, and each getter method returns the value of the instance variable
+#pragma mark (3) Each setter method sets the instance variable to whatever is passed in as an argument, and each getter method returns the value of the instance variable
 
 -(void)setItemName:(NSString *)str{
     _itemName = str;
@@ -75,8 +75,7 @@
     return _dateCreated;
 }
 
-
-//invoking accessors (via dot syntax).
+#pragma mark () invoking accessors (via dot syntax)
 
 -(NSString *)description{
     NSString *stringDesc = [[NSString alloc] initWithFormat:@"%@ (%@): worth $%d, recorded on %@",

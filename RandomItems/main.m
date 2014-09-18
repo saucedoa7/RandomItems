@@ -24,12 +24,13 @@ int main(int argc, const char * argv[])
         //Send another message, insertObjectAtIndex:, to that same array object
         [items insertObject:@"Zero" atIndex:0];
 
-        //For every item inthe item array
+        //For every item in the item array
         for (NSString *item in items) {
             // Log the desc of the item
             NSLog(@"For Item %@", item);
         }
-/*
+
+        /*
         Item *item = [Item new];
 
         // This creates an NSString, "Red Sofa" and gives it to the BNRItem
@@ -62,8 +63,7 @@ int main(int argc, const char * argv[])
         //or with accessors
 */
 
-
-        //Using Initializers
+#pragma mark Using Initializers
 
         Item *item = [[Item alloc] initWithItemName:@"Albert"
                                        serialNumber:@"A1b1"
